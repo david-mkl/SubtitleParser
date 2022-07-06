@@ -1,3 +1,3 @@
-# SubtitleParser
+# Subtitle Parser
 
-A description of this package.
+Parses a string from an `.srt` file into data structures.
