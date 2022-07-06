@@ -3,10 +3,10 @@ import Foundation
 /// A timestamp contains the hours, minutes, seconds, and milliseconds
 /// for when a subtitle will be displayed
 public struct Timestamp : CustomStringConvertible, Hashable {
-    let h: Int
-    let m: Int
-    let s: Int
-    let ms: Int
+    public let h: Int
+    public let m: Int
+    public let s: Int
+    public let ms: Int
     
     public var description: String { get {
         let hStr = String(h).leftPadding(toLength: 2, withPad: "0")
@@ -23,10 +23,10 @@ public struct Timestamp : CustomStringConvertible, Hashable {
 /// the subtitles are to be shown, start and end timestamps for when
 /// the subtitle is shown on the screen, and the actual caption content
 public struct Subtitle : CustomStringConvertible, Hashable {
-    let index: Int
-    let start: Timestamp
-    let end: Timestamp
-    let caption: String
+    public let index: Int
+    public let start: Timestamp
+    public let end: Timestamp
+    public let caption: String
     
     public var description: String { get {
         return [
