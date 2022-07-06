@@ -2,7 +2,7 @@ import Foundation
 
 /// A timestamp contains the hours, minutes, seconds, and milliseconds
 /// for when a subtitle will be displayed
-public struct Timestamp : CustomStringConvertible {
+public struct Timestamp : CustomStringConvertible, Hashable {
     let h: Int
     let m: Int
     let s: Int
@@ -22,7 +22,7 @@ public struct Timestamp : CustomStringConvertible {
 /// Contains an index indicating the order in which
 /// the subtitles are to be shown, start and end timestamps for when
 /// the subtitle is shown on the screen, and the actual caption content
-public struct Subtitle : CustomStringConvertible {
+public struct Subtitle : CustomStringConvertible, Hashable {
     let index: Int
     let start: Timestamp
     let end: Timestamp
