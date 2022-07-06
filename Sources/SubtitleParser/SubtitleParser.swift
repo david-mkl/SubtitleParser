@@ -50,8 +50,11 @@ public struct SRTParseError : Error, Equatable {
 
 /// Reads a srt string into data structures
 public struct SRTParser {
+    public init() {
+    }
+    
     /// Converts a string from a .srt file into an array of Subtitle structs representing each subtitle
-    func parse(from text: String) throws -> [Subtitle] {
+    public func parse(from text: String) throws -> [Subtitle] {
         var lineNumber = 1
         var subs: [Subtitle] = []
         
@@ -69,7 +72,7 @@ public struct SRTParser {
     }
     
     /// Converts subtitles back to a string
-    func parse(from subs: [Subtitle]) -> String {
+    public func parse(from subs: [Subtitle]) -> String {
         return subs.map { $0.description }.joined(separator: "\n")
     }
     
