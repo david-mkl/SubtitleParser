@@ -26,7 +26,7 @@ public struct Subtitle : CustomStringConvertible, Hashable {
     public let index: Int
     public let start: Timestamp
     public let end: Timestamp
-    public let caption: String
+    public var caption: String
     
     public var description: String { get {
         return [
