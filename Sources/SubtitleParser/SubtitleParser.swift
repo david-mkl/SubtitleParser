@@ -22,7 +22,8 @@ public struct Timestamp : CustomStringConvertible, Hashable {
 /// Contains an index indicating the order in which
 /// the subtitles are to be shown, start and end timestamps for when
 /// the subtitle is shown on the screen, and the actual caption content
-public struct Subtitle : CustomStringConvertible, Hashable {
+public struct Subtitle : CustomStringConvertible, Hashable, Identifiable {
+    public let id = UUID()
     public let index: Int
     public let start: Timestamp
     public let end: Timestamp
